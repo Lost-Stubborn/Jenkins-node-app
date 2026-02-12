@@ -1,9 +1,9 @@
 pipeline {
     agent any 
     
-    // environment {
-    //     PATH = "/opt/homebrew/bin:${env.PATH}"
-    // }
+    environment {
+        PATH = "/opt/homebrew/bin:${env.PATH}"
+    }
 
     stages {
         stage('Checkout') {
@@ -14,7 +14,7 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh 'npm install --this-does-not-exist'
+                sh 'npm install'
             }
         }
 
