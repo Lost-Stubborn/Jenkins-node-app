@@ -31,7 +31,7 @@ pipeline {
             steps {
                 echo "Packaging build artifact"
                 sh 'tar -czf app.tar.gz .'
-                archieveArtifacts artifacts: 'app.tar.gz'
+                archiveArtifacts artifacts: 'app.tar.gz'
             }
         }
 
